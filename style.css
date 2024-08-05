@@ -184,6 +184,33 @@ button:hover {
     font-size: 4rem;
     font-weight: bold;
     color: #FF595A;
+    display: inline-block;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.logo-central::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    background-color: rgba(255, 89, 90, 0.2); /* Color del resplandor, ajusta la opacidad según prefieras */
+    border-radius: 20px;
+    filter: blur(15px);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: -1;
+}
+
+.logo-central:hover {
+    transform: scale(1.05); /* Hace el logo ligeramente más grande */
+    text-shadow: 0 0 10px rgba(255, 89, 90, 0.7); /* Añade un resplandor al texto */
+}
+
+.logo-central:hover::before {
+    opacity: 1; /* Muestra el resplandor al hacer hover */
 }
 /* Estilos para la sección de contacto */
 #contacto .redes-sociales {
