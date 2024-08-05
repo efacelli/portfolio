@@ -1,0 +1,353 @@
+/* Estilos generales */
+
+
+@import url('animate.css');
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #001233;
+    background-color: #CAC0B3;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.titulo {
+    font-family: "Playwrite AR", cursive;
+    font-size: 2.5rem;
+    animation: bounce;
+  animation-duration: 2.5s; 
+}
+
+.subtitulo {
+    font-family: "Noto Serif Khitan Small Script", serif;
+}
+header {
+    background-color: #001233;
+    color: #CAC0B3;
+    padding: 1rem 0;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #FF595A;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-around; 
+    width: 100%;
+}
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: #CAC0B3;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+}
+
+nav ul li a:hover {
+    color: #ffffff;
+    transform: scale(1.1);
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    flex: 1;
+}
+
+section {
+    margin-bottom: 2rem;
+}
+
+h1, h2 {
+    color: #001233;
+}
+
+/* Estilos para la sección de habilidades */
+#habilidades ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+#habilidades li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem;
+    font-size: 1.2rem;
+    width: 100px;
+}
+
+#habilidades i {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+#habilidades span {
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+#habilidades img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+
+/* Estilos para los iconos */
+.fa-html5 { color: #e34c26; }
+.fa-css3-alt { color: #264de4; }
+.fa-sass { color: #cc6699; }
+.fa-js { color: #f0db4f; }
+.fa-react { color: #61dafb; }
+
+footer {
+    background-color: #001233;
+    color: #CAC0B3;
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: auto;
+}
+
+/* Estilos adicionales */
+a {
+    color: #FF595A;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+button {
+    background-color: #FF595A;
+    color: #001233;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ff7a7b;
+}
+#inicio .inicio-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#inicio .texto-inicio {
+    flex: 1;
+}
+
+#inicio .foto-perfil {
+    flex: 0 0 200px;
+    margin-left: 2rem;
+}
+
+#inicio .foto-perfil img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+/* Estilos para el logo grande central */
+#logo-grande {
+    text-align: center;
+    padding: 3rem 0;
+}
+
+.logo-central {
+    font-size: 4rem;
+    font-weight: bold;
+    color: #FF595A;
+}
+/* Estilos para la sección de contacto */
+#contacto .redes-sociales {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+#contacto .redes-sociales img {
+    width: 40px;
+    height: 40px;
+}
+#contacto .redes-sociales a {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+.certificado {
+    width: 300px;
+    padding: 20px;
+}
+#contacto .redes-sociales a:hover {
+    transform: scale(1.1);
+}
+#contacto .redes-sociales img {
+    width: 40px;
+    height: 40px;
+}
+/* Estilos para la sección de proyectos */
+#proyectos {
+    padding: 2rem 0;
+}
+
+.proyecto-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.proyecto {
+    background-color: #001233;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: calc(50% - 1rem);
+    max-width: 400px;
+    color: white;
+}
+
+.proyecto h3 {
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+}
+
+.proyecto p {
+    margin-bottom: 1rem;
+}
+
+.proyecto-links {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #FF595A;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #ff7a7b;
+}
+
+/* Estilos para los certificados en la sección "Sobre Mí" */
+#sobre-mi {
+    text-align: center;
+}
+.certificados-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Espacio entre los certificados */
+    margin-top: 20px;
+}
+
+.certificado {
+    max-width: 45%; /* Ajusta este valor según necesites */
+    height: auto;
+}
+.subtitulo {
+    text-align: center;
+}
+/* Media queries para responsividad */
+@media (max-width: 768px) {
+    /* Ajustes para el nav en móviles */
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 0.5rem 0;
+    }
+
+    /* Ajustes para la sección de inicio */
+    #inicio .inicio-content {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    #inicio .foto-perfil {
+        margin-left: 0;
+        margin-bottom: 1rem;
+    }
+/* Ajustes para la sección sobre mi */
+    .certificados-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .certificado {
+        max-width: 90%;
+        margin-bottom: 20px;
+    }
+    /* Ajustes para la sección de habilidades */
+    #habilidades ul {
+        justify-content: center;
+    }
+
+    /* Ajustes para la sección de proyectos */
+    .proyecto {
+        width: 100%;
+    }
+
+    /* Ajustes para la sección de contacto */
+    #contacto .redes-sociales {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Ajustes adicionales para pantallas muy pequeñas */
+    body {
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .logo-central {
+        font-size: 3rem;
+    }
+}
