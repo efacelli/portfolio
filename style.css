@@ -38,7 +38,18 @@ nav {
     margin: 0 auto;
     padding: 0 1rem;
 }
-
+.translate-icon {
+    cursor: pointer;
+    margin-left: 1rem;
+}
+.translate-icon img {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease;
+}
+.translate-icon:hover img {
+    transform: scale(1.1);
+}
 .logo {
     font-size: 1.5rem;
     font-weight: bold;
@@ -196,7 +207,7 @@ button:hover {
     left: -10px;
     right: -10px;
     bottom: -10px;
-    background-color: rgba(255, 89, 90, 0.2); /* Color del resplandor, ajusta la opacidad según prefieras */
+    background-color: rgba(255, 89, 90, 0.2); 
     border-radius: 20px;
     filter: blur(15px);
     opacity: 0;
@@ -205,12 +216,12 @@ button:hover {
 }
 
 .logo-central:hover {
-    transform: scale(1.05); /* Hace el logo ligeramente más grande */
-    text-shadow: 0 0 10px rgba(255, 89, 90, 0.7); /* Añade un resplandor al texto */
+    transform: scale(1.05); 
+    text-shadow: 0 0 10px rgba(255, 89, 90, 0.7); 
 }
 
 .logo-central:hover::before {
-    opacity: 1; /* Muestra el resplandor al hacer hover */
+    opacity: 1; 
 }
 /* Estilos para la sección de contacto */
 #contacto .redes-sociales {
@@ -301,20 +312,27 @@ button:hover {
 }
 
 .certificado {
-    max-width: 45%; /* Ajusta este valor según necesites */
+    max-width: 45%; 
     height: auto;
 }
 .subtitulo {
     text-align: center;
 }
-/* Media queries para responsividad */
+
 @media (max-width: 768px) {
     /* Ajustes para el nav en móviles */
-    nav {
-        flex-direction: column;
-        align-items: center;
+    @media (max-width: 768px) {
+        nav {
+            flex-wrap: wrap;
+        }
+        
+        .translate-icon {
+            order: -1;
+            margin: 0.5rem 0;
+            width: 100%;
+            text-align: right;
+        }
     }
-
     nav ul {
         flex-direction: column;
         align-items: center;

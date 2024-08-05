@@ -4,13 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Portfolio - Frontend Developer</title>
+    <title>Enzo Facelli - Frontend Developer</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.compat.css" />
     <link href="https://fonts.googleapis.com/css2?family=Playwrite+AR:wght@100..400&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+
 </head>
 
 <body>
@@ -18,12 +19,16 @@
         <nav>
             <div class="logo">&lt;Enzo/&gt;</div>
             <ul>
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#sobre-mi">Sobre Mí</a></li>
-                <li><a href="#habilidades">Habilidades</a></li>
-                <li><a href="#proyectos">Proyectos</a></li>
-                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="#inicio" data-translate="nav-inicio">Inicio</a></li>
+                <li><a href="#sobre-mi" data-translate="nav-sobre-mi">Sobre Mí</a></li>
+                <li><a href="#habilidades" data-translate="nav-habilidades">Habilidades</a></li>
+                <li><a href="#proyectos" data-translate="nav-proyectos">Proyectos</a></li>
+                <li><a href="#contacto" data-translate="nav-contacto">Contacto</a></li>
             </ul>
+            <div class="translate-icon" id="translate-button">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/d/db/Google_Translate_Icon.png"
+                    alt="Translate">
+            </div>
         </nav>
     </header>
 
@@ -31,8 +36,9 @@
         <section id="inicio">
             <div class="inicio-content">
                 <div class="texto-inicio">
-                    <h1 class="titulo" class="animate__bounce">Frontend Developer</h1>
-                    <p>¡Hola! Soy Enzo Facelli, un desarrollador frontend de Santiago del Estero, Argentina.</p>
+                    <h1 data-translate="header-title">Desarrollador Frontend</h1>
+                    <p data-translate="header-subtitle">¡Hola! Soy un desarrollador frontend de Santiago del Estero,
+                        Argentina.</p>
                 </div>
                 <div class="foto-perfil">
                     <img src="img/enzoFoto.jpg" alt="Foto de Enzo">
@@ -40,20 +46,21 @@
             </div>
         </section>
 
+
         <section id="logo-grande">
             <div class="logo-central">&lt;Enzo/&gt;</div>
         </section>
-        
+
 
         <section id="sobre-mi">
-            <h2 class="subtitulo">Sobre Mí</h2>
-            <p>Tengo 20 años y soy apasionado por el desarrollo web. Me especializo en crear interfaces atractivas y
-                funcionales y tengo <b>conocimientos avanzados sobre ingles</b>. Empecé a estudiar Programación en 2022
-                en
-                Teclab, gracias a eso tengo conocimientos básicos sobre <b>Python</b> y <b>C++</b>, estudié 6 meses allí
-                y me cambié a
-                Coderhouse en 2023,
-                donde tengo certificados de <b>Desarrollador web</b> (HTML5, Css, Sass), <b>JavaScript</b> y en 2024
+            <h2 data-translate="sobre-mi-title">Sobre Mí</h2>
+            <p data-translate="sobre-mi-content">
+                Tengo 20 años y soy apasionado por el desarrollo web. Me especializo en crear interfaces atractivas y
+                funcionales y tengo <b>conocimientos avanzados sobre inglés</b>. Empecé a estudiar Programación en 2022
+                en Teclab, gracias a eso tengo conocimientos básicos sobre <b>Python</b> y <b>C++</b>, estudié 6 meses
+                allí
+                y me cambié a Coderhouse en 2023,
+                donde tengo certificados de <b>Desarrollador web</b> (HTML5, CSS, Sass), <b>JavaScript</b> y en 2024
                 terminé de estudiar <b>React JS</b> en la UTN.
             </p>
             <div class="certificados-container">
@@ -63,7 +70,7 @@
         </section>
 
         <section id="habilidades">
-            <h2 class="subtitulo">Mis Habilidades</h2>
+            <h2 data-translate="habilidades-title">Mis Habilidades</h2>
             <ul>
                 <li>
                     <i class="fab fa-html5"></i>
@@ -94,32 +101,29 @@
         </section>
 
         <section id="proyectos">
-            <h2 class="subtitulo">Mis Proyectos</h2>
+            <h2 class="subtitulo" data-translate="proyectos-title">Mis Proyectos</h2>
             <div class="proyecto-container">
                 <div class="proyecto">
-                    <h3>WhatsApp Propio</h3>
-                    <p>Un WhatsApp funcional desarrollado con React JS.</p>
+                    <h3 data-translate="proyecto-1-title">WhatsApp Propio</h3>
+                    <p data-translate="proyecto-1-desc">Un WhatsApp funcional desarrollado con React JS.</p>
                     <div class="proyecto-links">
-                        <a href="https://react-nw6i9el32-efacellis-projects.vercel.app/" target="_blank" class="btn">Ver
-                            Proyecto</a>
-                        <a href="https://github.com/efacelli/finalUTN" target="_blank" class="btn">Ver Código</a>
+                        <a href="#" target="_blank" class="btn" data-translate="btn-ver-proyecto">Ver Proyecto</a>
+                        <a href="#" target="_blank" class="btn" data-translate="btn-ver-codigo">Ver Código</a>
                     </div>
                 </div>
                 <div class="proyecto">
-                    <h3>E-commerce</h3>
-                    <p>Tienda en línea desarrollada con JavaScript.</p>
+                    <h3 data-translate="proyecto-2-title">E-commerce</h3>
+                    <p data-translate="proyecto-2-desc">Tienda en línea desarrollada con JavaScript.</p>
                     <div class="proyecto-links">
-                        <a href="https://efacelli.github.io/proyectoEcommerce/" target="_blank" class="btn">Ver
-                            Proyecto</a>
-                        <a href="https://github.com/efacelli/proyectoEcommerce" target="_blank" class="btn">Ver
-                            Código</a>
+                        <a href="#" target="_blank" class="btn" data-translate="btn-ver-proyecto">Ver Proyecto</a>
+                        <a href="#" target="_blank" class="btn" data-translate="btn-ver-codigo">Ver Código</a>
                     </div>
                 </div>
             </div>
         </section>
 
         <section id="contacto">
-            <h2 class="subtitulo">Contacto</h2>
+            <h2 class="subtitulo" data-translate="contacto-title">Contacto</h2>
             <div class="redes-sociales">
                 <a href="https://github.com/efacellitarget=" _blank">
                     <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub">
@@ -142,6 +146,7 @@
     <footer>
         <p>&copy; 2024 efacelli. Todos los derechos reservados.</p>
     </footer>
+    <script src="script.js"></script>
 </body>
 
 </html>
