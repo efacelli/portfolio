@@ -1,15 +1,24 @@
 /* Estilos generales */
-
-
 @import url('animate.css');
 
+:root {
+    --color-background: rgba(0, 0, 0, 0.7); /* Fondo semi-transparente */
+    --color-text: #ffffff;
+    --color-accent: #FF6600;
+    --color-secondary: rgba(51, 51, 51, 0.8); /* Fondo semi-transparente */
+}
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    color: #001233;
-    background-color: #CAC0B3;
+    color: var(--color-text);
+    background-image: url('img/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -19,17 +28,43 @@ body {
     font-family: "Playwrite AR", cursive;
     font-size: 2.5rem;
     animation: bounce;
-  animation-duration: 4.5s; 
+    animation-duration: 4.5s;
+    color: var(--color-accent);
 }
 
 .subtitulo {
     font-family: "Noto Serif Khitan Small Script", serif;
+    color: var(--color-accent);
 }
+
+/* Animación de escritura para el subtítulo "Sobre Mí" */
+#sobre-mi .subtitulo {
+    overflow: hidden;
+    border-right: .15em solid var(--color-accent);
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: .15em;
+    animation: 
+        typing 3.5s steps(40, end),
+        blink-caret .75s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: var(--color-accent); }
+}
+
 header {
-    background-color: #001233;
-    color: #CAC0B3;
+    background-color: var(--color-background);
+    color: var(--color-text);
     padding: 1rem 0;
 }
+
 nav {
     display: flex;
     justify-content: space-between;
@@ -38,39 +73,43 @@ nav {
     margin: 0 auto;
     padding: 0 1rem;
 }
+
 .translate-icon {
     cursor: pointer;
     margin-left: 1rem;
 }
+
 .translate-icon img {
     width: 24px;
     height: 24px;
     transition: transform 0.3s ease;
 }
+
 .translate-icon:hover img {
     transform: scale(1.1);
 }
+
 .logo {
     font-size: 1.5rem;
     font-weight: bold;
-    color: #FF595A;
+    color: var(--color-accent);
 }
 
 nav ul {
     list-style-type: none;
     padding: 0;
     display: flex;
-    justify-content: space-around; 
+    justify-content: space-around;
     width: 100%;
 }
+
 nav ul li {
     margin: 0 1rem;
 }
 
-/* From Uiverse.io by WhiteNervosa */ 
 .nav_li {
     font-size: 18px;
-    color: #e1e1e1;
+    color: var(--color-text);
     font-family: inherit;
     font-weight: 800;
     cursor: pointer;
@@ -78,22 +117,14 @@ nav ul li {
     border: none;
     background: none;
     text-transform: uppercase;
-    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
-    transition-duration: 400ms;
-    transition-property: color;
-  }
-  
+    transition: color 0.3s ease;
+}
+
 .nav_li:focus,
 .nav_li:hover {
-    color: #fff;
-  }
-  
-.nav_li:focus:after,
-.nav_li:hover:after {
-    width: 100%;
-    left: 0%;
-  }
-  
+    color: var(--color-accent);
+}
+
 .nav_li:after {
     content: "";
     pointer-events: none;
@@ -102,11 +133,15 @@ nav ul li {
     position: absolute;
     width: 0%;
     height: 2px;
-    background-color: #fff;
-    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
-    transition-duration: 400ms;
-    transition-property: width, left;
-  }
+    background-color: var(--color-accent);
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+.nav_li:focus:after,
+.nav_li:hover:after {
+    width: 100%;
+    left: 0%;
+}
 
 main {
     max-width: 800px;
@@ -115,15 +150,21 @@ main {
     flex: 1;
 }
 
+.main-container {
+    background-color: var(--color-background);
+    min-height: 100vh;
+    width: 100%;
+}
+
+
 section {
     margin-bottom: 2rem;
 }
 
 h1, h2 {
-    color: #001233;
+    color: var(--color-accent);
 }
 
-/* Estilos para la sección de habilidades */
 #habilidades ul {
     list-style-type: none;
     padding: 0;
@@ -144,6 +185,7 @@ h1, h2 {
 #habilidades i {
     font-size: 2rem;
     margin-bottom: 0.5rem;
+    color: var(--color-accent);
 }
 
 #habilidades span {
@@ -157,24 +199,16 @@ h1, h2 {
     object-fit: contain;
 }
 
-/* Estilos para los iconos */
-.fa-html5 { color: #e34c26; }
-.fa-css3-alt { color: #264de4; }
-.fa-sass { color: #cc6699; }
-.fa-js { color: #f0db4f; }
-.fa-react { color: #61dafb; }
-
 footer {
-    background-color: #001233;
-    color: #CAC0B3;
+    background-color: var(--color-background);
+    color: var(--color-text);
     text-align: center;
     padding: 2rem 0;
     margin-top: auto;
 }
 
-/* Estilos adicionales */
 a {
-    color: #FF595A;
+    color: var(--color-accent);
     text-decoration: none;
 }
 
@@ -183,8 +217,8 @@ a:hover {
 }
 
 button {
-    background-color: #FF595A;
-    color: #001233;
+    background-color: var(--color-accent);
+    color: var(--color-background);
     border: none;
     padding: 0.5rem 1rem;
     cursor: pointer;
@@ -194,7 +228,6 @@ button:hover {
     background-color: #ff7a7b;
 }
 
-/* From Uiverse.io by Nawsome */ 
 .loader {
     position: absolute;
     top: 50%;
@@ -207,9 +240,9 @@ button:hover {
     border-radius: 5px;
     background: #1e3f57;
     animation: dot1_ 3s cubic-bezier(0.55,0.3,0.24,0.99) infinite;
-  }
-  
-  .loader:nth-child(2) {
+}
+
+.loader:nth-child(2) {
     z-index: 11;
     width: 150px;
     height: 90px;
@@ -218,9 +251,9 @@ button:hover {
     border-radius: 3px;
     background: #3c517d;
     animation-name: dot2_;
-  }
-  
-  .loader:nth-child(3) {
+}
+
+.loader:nth-child(3) {
     z-index: 12;
     width: 40px;
     height: 20px;
@@ -229,8 +262,7 @@ button:hover {
     border-radius: 0 0 5px 5px;
     background: #6bb2cd;
     animation-name: dot3_;
-  }
-  
+}
 
 #inicio .inicio-content {
     display: flex;
@@ -253,7 +285,7 @@ button:hover {
     border-radius: 50%;
     object-fit: cover;
 }
-/* Estilos para el logo grande central */
+
 #logo-grande {
     text-align: center;
     padding: 3rem 0;
@@ -262,7 +294,7 @@ button:hover {
 .logo-central {
     font-size: 4rem;
     font-weight: bold;
-    color: #FF595A;
+    color: var(--color-accent);
     display: inline-block;
     transition: all 0.3s ease;
     position: relative;
@@ -275,7 +307,7 @@ button:hover {
     left: -10px;
     right: -10px;
     bottom: -10px;
-    background-color: rgba(255, 89, 90, 0.2); 
+    background-color: rgba(255, 102, 0, 0.2);
     border-radius: 20px;
     filter: blur(15px);
     opacity: 0;
@@ -284,14 +316,14 @@ button:hover {
 }
 
 .logo-central:hover {
-    transform: scale(1.05); 
-    text-shadow: 0 0 10px rgba(255, 89, 90, 0.7); 
+    transform: scale(1.05);
+    text-shadow: 0 0 10px rgba(255, 102, 0, 0.7);
 }
 
 .logo-central:hover::before {
-    opacity: 1; 
+    opacity: 1;
 }
-/* Estilos para la sección de contacto */
+
 #contacto .redes-sociales {
     display: flex;
     justify-content: center;
@@ -303,22 +335,21 @@ button:hover {
     width: 40px;
     height: 40px;
 }
+
 #contacto .redes-sociales a {
     display: inline-block;
     transition: transform 0.3s ease;
 }
+
 .certificado {
     width: 300px;
     padding: 20px;
 }
+
 #contacto .redes-sociales a:hover {
     transform: scale(1.1);
 }
-#contacto .redes-sociales img {
-    width: 40px;
-    height: 40px;
-}
-/* Estilos para la sección de proyectos */
+
 #proyectos {
     padding: 2rem 0;
 }
@@ -331,17 +362,17 @@ button:hover {
 }
 
 .proyecto {
-    background-color: #001233;
+    background-color: var(--color-secondary);
     border-radius: 8px;
     padding: 1.5rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(255, 102, 0, 0.1);
     width: calc(50% - 1rem);
     max-width: 400px;
-    color: white;
+    color: var(--color-text);
 }
 
 .proyecto h3 {
-    color: #ffffff;
+    color: var(--color-accent);
     margin-bottom: 0.5rem;
 }
 
@@ -354,14 +385,13 @@ button:hover {
     justify-content: space-between;
 }
 
-/* From Uiverse.io by ernestnash */ 
 .btn {
     display: inline-block;
     padding: 0.9rem 1.8rem;
     font-size: 16px;
     font-weight: 700;
-    color: white;
-    border: 3px solid rgb(252, 70, 100);
+    color: var(--color-text);
+    border: 3px solid var(--color-accent);
     cursor: pointer;
     position: relative;
     background-color: transparent;
@@ -369,59 +399,62 @@ button:hover {
     overflow: hidden;
     z-index: 1;
     font-family: inherit;
-   }
-   
-   .btn::before {
+}
+
+.btn::before {
     content: "";
     position: absolute;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgb(252, 70, 100);
+    background-color: var(--color-accent);
     transform: translateX(-100%);
     transition: all .3s;
     z-index: -1;
-   }
-   
-   .btn:hover::before {
-    transform: translateX(0);
-   }
+}
 
-/* Estilos para los certificados en la sección "Sobre Mí" */
+.btn:hover::before {
+    transform: translateX(0);
+}
+
 #sobre-mi {
     text-align: center;
+    border: 1px solid var(--color-accent);
+    border-radius: 10px;
+    padding: 2rem;
+    background-color: rgba(255, 102, 0, 0.1);
 }
+
 .certificados-container {
     display: flex;
     justify-content: center;
-    gap: 20px; /* Espacio entre los certificados */
+    gap: 20px;
     margin-top: 20px;
 }
 
 .certificado {
-    max-width: 45%; 
+    max-width: 45%;
     height: auto;
 }
+
 .subtitulo {
     text-align: center;
     font-family: inherit;
 }
 
 @media (max-width: 768px) {
-    /* Ajustes para el nav en móviles */
-    @media (max-width: 768px) {
-        nav {
-            flex-wrap: wrap;
-        }
-        
-        .translate-icon {
-            order: -1;
-            margin: 0.5rem 0;
-            width: 100%;
-            text-align: right;
-        }
+    nav {
+        flex-wrap: wrap;
     }
+    
+    .translate-icon {
+        order: -1;
+        margin: 0.5rem 0;
+        width: 100%;
+        text-align: right;
+    }
+
     nav ul {
         flex-direction: column;
         align-items: center;
@@ -431,7 +464,6 @@ button:hover {
         margin: 0.5rem 0;
     }
 
-    /* Ajustes para la sección de inicio */
     #inicio .inicio-content {
         flex-direction: column-reverse;
         text-align: center;
@@ -441,7 +473,7 @@ button:hover {
         margin-left: 0;
         margin-bottom: 1rem;
     }
-/* Ajustes para la sección sobre mi */
+
     .certificados-container {
         flex-direction: column;
         align-items: center;
@@ -451,24 +483,21 @@ button:hover {
         max-width: 90%;
         margin-bottom: 20px;
     }
-    /* Ajustes para la sección de habilidades */
+
     #habilidades ul {
         justify-content: center;
     }
 
-    /* Ajustes para la sección de proyectos */
     .proyecto {
         width: 100%;
     }
 
-    /* Ajustes para la sección de contacto */
     #contacto .redes-sociales {
         flex-wrap: wrap;
     }
 }
 
 @media (max-width: 480px) {
-    /* Ajustes adicionales para pantallas muy pequeñas */
     body {
         font-size: 14px;
     }

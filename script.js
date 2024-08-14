@@ -59,3 +59,56 @@ document.addEventListener('DOMContentLoaded', function() {
         updateLanguage(isEnglish ? 'en' : 'es');
     });
 });
+
+// Espera a que el DOM esté completamente cargado
+document.addEventListener('DOMContentLoaded', () => {
+
+    // Animación del logo grande
+    gsap.from(".logo-central", {
+      duration: 1.5,
+      opacity: 0,
+      scale: 0.5,
+      ease: "back.out(1.7)"
+    });
+  
+    // Animación de los elementos de la sección de habilidades
+    gsap.from("#habilidades ul li", {
+      duration: 0.8,
+      opacity: 0,
+      y: 50,
+      stagger: 0.2,
+      ease: "power3.out"
+    });
+  
+    // Animación de los proyectos
+    gsap.from(".proyecto", {
+      duration: 1,
+      opacity: 0,
+      y: 100,
+      stagger: 0.3,
+      ease: "power2.out",
+      scrollTrigger: {
+        trigger: "#proyectos",
+        start: "top 80%"
+      }
+    });
+  
+    // Animación del texto de inicio
+    gsap.from(".texto-inicio", {
+      duration: 1,
+      opacity: 0,
+      x: -100,
+      ease: "power2.out"
+    });
+  
+    // Animación de la foto de perfil
+    gsap.from(".foto-perfil", {
+      duration: 1,
+      opacity: 0,
+      x: 100,
+      ease: "power2.out"
+    });
+  
+  });
+
+  gsap.registerPlugin(ScrollTrigger);

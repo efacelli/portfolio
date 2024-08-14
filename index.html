@@ -12,143 +12,155 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.compat.css" />
     <link href="https://fonts.googleapis.com/css2?family=Playwrite+AR:wght@100..400&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 
 </head>
 
 <body>
-    <header>
-        <nav>
-            <div class="logo">&lt;Enzo/&gt;</div>
-            <ul>
-                <li><a href="#inicio" data-translate="nav-inicio" class="nav_li">Inicio</a></li>
-                <li><a href="#sobre-mi" data-translate="nav-sobre-mi" class="nav_li">Sobre Mí</a></li>
-                <li><a href="#habilidades" data-translate="nav-habilidades" class="nav_li">Habilidades</a></li>
-                <li><a href="#proyectos" data-translate="nav-proyectos" class="nav_li">Proyectos</a></li>
-                <li><a href="#contacto" data-translate="nav-contacto" class="nav_li">Contacto</a></li>
-            </ul>
-            <div class="translate-icon" id="translate-button">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/d/db/Google_Translate_Icon.png"
-                    alt="Translate">
-            </div>
-        </nav>
-    </header>
-
-    <main>
-        <section id="inicio">
-            <div class="inicio-content">
-                <div class="texto-inicio">
-                    <h1 class="titulo" data-translate="header-title">Desarrollador Frontend</h1>
-                    <p data-translate="header-subtitle">¡Hola! Soy un desarrollador frontend de Santiago del Estero,
-                        Argentina.</p>
+    <div class="main-container">
+        <header>
+            <nav>
+                <div class="logo">&lt;Enzo/&gt;</div>
+                <ul>
+                    <li><a href="#inicio" data-translate="nav-inicio" class="nav_li">Inicio</a></li>
+                    <li><a href="#sobre-mi" data-translate="nav-sobre-mi" class="nav_li">Sobre Mí</a></li>
+                    <li><a href="#habilidades" data-translate="nav-habilidades" class="nav_li">Habilidades</a></li>
+                    <li><a href="#proyectos" data-translate="nav-proyectos" class="nav_li">Proyectos</a></li>
+                    <li><a href="#contacto" data-translate="nav-contacto" class="nav_li">Contacto</a></li>
+                </ul>
+                <div class="translate-icon" id="translate-button">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/d/db/Google_Translate_Icon.png"
+                        alt="Translate">
                 </div>
-                
-                <div class="foto-perfil">
-                    <img src="img/37922b33-7551-41ba-88d4-2b0d48ed973f.jpg" alt="Foto de Enzo">
-                </div>
-            </div>
-        </section>
+            </nav>
+        </header>
 
+        <main>
+            <section id="inicio">
+                <div class="inicio-content">
+                    <div class="texto-inicio">
+                        <h1 class="titulo" data-translate="header-title">Desarrollador Frontend</h1>
+                        <p data-translate="header-subtitle">¡Hola! Soy un desarrollador frontend de Santiago del Estero,
+                            Argentina.</p>
+                    </div>
 
-        <section id="logo-grande">
-            <div class="logo-central">&lt;Enzo/&gt;</div>
-        </section>
-
-
-        <section id="sobre-mi">
-            <h2 data-translate="sobre-mi-title" class="subtitulo">Sobre Mí</h2>
-            <p data-translate="sobre-mi-content">
-                Tengo 20 años y soy apasionado por el desarrollo web. Me especializo en crear interfaces atractivas y
-                funcionales y tengo <b>conocimientos avanzados sobre inglés</b>. Empecé a estudiar Programación en 2022
-                en Teclab, gracias a eso tengo conocimientos básicos sobre <b>Python</b> y <b>C++</b>, estudié 6 meses
-                allí
-                y me cambié a Coderhouse en 2023,
-                donde tengo certificados de <b>Desarrollador web</b> (HTML5, CSS, Sass), <b>JavaScript</b> y en 2024
-                terminé de estudiar <b>React JS</b> en la UTN.
-            </p>
-            <div class="certificados-container">
-                <img src="./img/enzoWDcertificate.png" alt="certificado Web" class="certificado">
-                <img src="./img/enzoJScertificate.png" alt="certificado JavaScript" class="certificado">
-            </div>
-        </section>
-
-        <section id="habilidades">
-            <h2 data-translate="habilidades-title" class="subtitulo">Mis Habilidades</h2>
-            <ul>
-                <li>
-                    <i class="fab fa-html5"></i>
-                    <span>HTML5</span>
-                    <img src="https://cdn.worldvectorlogo.com/logos/html-1.svg" alt="HTML5 logo">
-                </li>
-                <li>
-                    <i class="fab fa-css3-alt"></i>
-                    <span>CSS3</span>
-                    <img src="https://cdn.worldvectorlogo.com/logos/css-3.svg" alt="CSS3 logo">
-                </li>
-                <li>
-                    <i class="fab fa-sass"></i>
-                    <span>Sass</span>
-                    <img src="https://cdn.worldvectorlogo.com/logos/sass-1.svg" alt="Sass logo">
-                </li>
-                <li>
-                    <i class="fab fa-js"></i>
-                    <span>JavaScript</span>
-                    <img src="https://cdn.worldvectorlogo.com/logos/logo-javascript.svg" alt="JavaScript logo">
-                </li>
-                <li>
-                    <i class="fab fa-react"></i>
-                    <span>React JS</span>
-                    <img src="https://cdn.worldvectorlogo.com/logos/react-2.svg" alt="React logo">
-                </li>
-            </ul>
-        </section>
-
-        <section id="proyectos">
-            <h2 class="subtitulo" data-translate="proyectos-title">Mis Proyectos</h2>
-            <div class="proyecto-container">
-                <div class="proyecto">
-                    <h3 data-translate="proyecto-1-title">WhatsApp Propio</h3>
-                    <p data-translate="proyecto-1-desc">Un WhatsApp funcional desarrollado con React JS.</p>
-                    <div class="proyecto-links">
-                        <a href="https://react-nw6i9el32-efacellis-projects.vercel.app/" target="_blank" class="btn" data-translate="btn-ver-proyecto">Ver Proyecto</a>
-                        <a href="https://github.com/efacelli/finalUTN" target="_blank" class="btn" data-translate="btn-ver-codigo">Ver Código</a>
+                    <div class="foto-perfil">
+                        <img src="img/37922b33-7551-41ba-88d4-2b0d48ed973f.jpg" alt="Foto de Enzo">
                     </div>
                 </div>
-                <div class="proyecto">
-                    <h3 data-translate="proyecto-2-title">E-commerce</h3>
-                    <p data-translate="proyecto-2-desc">Tienda en línea desarrollada con JavaScript.</p>
-                    <div class="proyecto-links">
-                        <a href="https://efacelli.github.io/proyectoEcommerce/" target="_blank" class="btn" data-translate="btn-ver-proyecto">Ver Proyecto</a>
-                        <a href="https://github.com/efacelli/proyectoEcommerce" target="_blank" class="btn" data-translate="btn-ver-codigo">Ver Código</a>
+            </section>
+
+
+            <section id="logo-grande">
+                <div class="logo-central">&lt;Enzo/&gt;</div>
+            </section>
+
+
+            <section id="sobre-mi">
+                <h2 data-translate="sobre-mi-title" class="subtitulo">Sobre Mí</h2>
+                <p data-translate="sobre-mi-content">
+                    Tengo 20 años y soy apasionado por el desarrollo web. Me especializo en crear interfaces atractivas
+                    y
+                    funcionales y tengo <b>conocimientos avanzados sobre inglés</b>. Empecé a estudiar Programación en
+                    2022
+                    en Teclab, gracias a eso tengo conocimientos básicos sobre <b>Python</b> y <b>C++</b>, estudié 6
+                    meses
+                    allí
+                    y me cambié a Coderhouse en 2023,
+                    donde tengo certificados de <b>Desarrollador web</b> (HTML5, CSS, Sass), <b>JavaScript</b> y en 2024
+                    terminé de estudiar <b>React JS</b> en la UTN.
+                </p>
+                <div class="certificados-container">
+                    <img src="./img/enzoWDcertificate.png" alt="certificado Web" class="certificado">
+                    <img src="./img/enzoJScertificate.png" alt="certificado JavaScript" class="certificado">
+                </div>
+            </section>
+
+            <section id="habilidades">
+                <h2 data-translate="habilidades-title" class="subtitulo">Mis Habilidades</h2>
+                <ul>
+                    <li>
+                        <i class="fab fa-html5"></i>
+                        <span>HTML5</span>
+                        <img src="https://cdn.worldvectorlogo.com/logos/html-1.svg" alt="HTML5 logo">
+                    </li>
+                    <li>
+                        <i class="fab fa-css3-alt"></i>
+                        <span>CSS3</span>
+                        <img src="https://cdn.worldvectorlogo.com/logos/css-3.svg" alt="CSS3 logo">
+                    </li>
+                    <li>
+                        <i class="fab fa-sass"></i>
+                        <span>Sass</span>
+                        <img src="https://cdn.worldvectorlogo.com/logos/sass-1.svg" alt="Sass logo">
+                    </li>
+                    <li>
+                        <i class="fab fa-js"></i>
+                        <span>JavaScript</span>
+                        <img src="https://cdn.worldvectorlogo.com/logos/logo-javascript.svg" alt="JavaScript logo">
+                    </li>
+                    <li>
+                        <i class="fab fa-react"></i>
+                        <span>React JS</span>
+                        <img src="https://cdn.worldvectorlogo.com/logos/react-2.svg" alt="React logo">
+                    </li>
+                </ul>
+            </section>
+
+            <section id="proyectos">
+                <h2 class="subtitulo" data-translate="proyectos-title">Mis Proyectos</h2>
+                <div class="proyecto-container">
+                    <div class="proyecto">
+                        <h3 data-translate="proyecto-1-title">WhatsApp Propio</h3>
+                        <p data-translate="proyecto-1-desc">Un WhatsApp funcional desarrollado con React JS.</p>
+                        <div class="proyecto-links">
+                            <a href="https://react-nw6i9el32-efacellis-projects.vercel.app/" target="_blank" class="btn"
+                                data-translate="btn-ver-proyecto">Ver Proyecto</a>
+                            <a href="https://github.com/efacelli/finalUTN" target="_blank" class="btn"
+                                data-translate="btn-ver-codigo">Ver Código</a>
+                        </div>
+                    </div>
+                    <div class="proyecto">
+                        <h3 data-translate="proyecto-2-title">E-commerce</h3>
+                        <p data-translate="proyecto-2-desc">Tienda en línea desarrollada con JavaScript.</p>
+                        <div class="proyecto-links">
+                            <a href="https://efacelli.github.io/proyectoEcommerce/" target="_blank" class="btn"
+                                data-translate="btn-ver-proyecto">Ver Proyecto</a>
+                            <a href="https://github.com/efacelli/proyectoEcommerce" target="_blank" class="btn"
+                                data-translate="btn-ver-codigo">Ver Código</a>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <section id="contacto">
-            <h2 class="subtitulo" data-translate="contacto-title">Contacto</h2>
-            <div class="redes-sociales">
-                <a href="https://github.com/efacelli" _blank">
-                    <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub">
-                </a>
-                <a href="https://www.linkedin.com/in/enzo-facelli-723227321/" target="_blank">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png"
-                        alt="LinkedIn">
-                </a>
-                <a href="https://wa.me/543855305773" target="_blank">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
-                </a>
-                <a href="mailto:enzomagic32@gmail.com">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_%282020%29.svg"
-                        alt="Gmail">
-                </a>
-            </div>
-        </section>
-    </main>
+            <section id="contacto">
+                <h2 class="subtitulo" data-translate="contacto-title">Contacto</h2>
+                <div class="redes-sociales">
+                    <a href="https://github.com/efacelli" _blank">
+                        <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
+                            alt="GitHub">
+                    </a>
+                    <a href="https://www.linkedin.com/in/enzo-facelli-723227321/" target="_blank">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png"
+                            alt="LinkedIn">
+                    </a>
+                    <a href="https://wa.me/543855305773" target="_blank">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+                    </a>
+                    <a href="mailto:enzomagic32@gmail.com">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_%282020%29.svg"
+                            alt="Gmail">
+                    </a>
+                </div>
+            </section>
+        </main>
 
-    <footer>
-        <p>&copy; 2024 efacelli. Todos los derechos reservados.</p>
-    </footer>
-    <script src="script.js"></script>
+        <footer>
+            <p>&copy; 2024 efacelli. Todos los derechos reservados.</p>
+        </footer>
+        <script src="script.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    </div>
 </body>
 
 </html>
