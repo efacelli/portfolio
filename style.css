@@ -2,10 +2,10 @@
 @import url('animate.css');
 
 :root {
-    --color-background: rgba(0, 0, 0, 0.7); /* Fondo semi-transparente */
+    --color-background: rgba(0, 0, 0, 0.7);
     --color-text: #ffffff;
     --color-accent: #FF6600;
-    --color-secondary: rgba(51, 51, 51, 0.8); /* Fondo semi-transparente */
+    --color-secondary: rgba(51, 51, 51, 0.8);
 }
 
 body {
@@ -22,11 +22,18 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    font-size: 18px;
+}
+
+.main-container {
+    background-color: var(--color-background);
+    min-height: 100vh;
+    width: 100%;
 }
 
 .titulo {
     font-family: "Playwrite AR", cursive;
-    font-size: 2.5rem;
+    font-size: 3rem;
     animation: bounce;
     animation-duration: 4.5s;
     color: var(--color-accent);
@@ -35,6 +42,7 @@ body {
 .subtitulo {
     font-family: "Noto Serif Khitan Small Script", serif;
     color: var(--color-accent);
+    font-size: 2.2rem;
 }
 
 /* Animación de escritura para el subtítulo "Sobre Mí" */
@@ -149,13 +157,6 @@ main {
     padding: 2rem;
     flex: 1;
 }
-
-.main-container {
-    background-color: var(--color-background);
-    min-height: 100vh;
-    width: 100%;
-}
-
 
 section {
     margin-bottom: 2rem;
@@ -341,11 +342,6 @@ button:hover {
     transition: transform 0.3s ease;
 }
 
-.certificado {
-    width: 300px;
-    padding: 20px;
-}
-
 #contacto .redes-sociales a:hover {
     transform: scale(1.1);
 }
@@ -423,7 +419,6 @@ button:hover {
     border: 1px solid var(--color-accent);
     border-radius: 10px;
     padding: 2rem;
-    background-color: rgba(255, 102, 0, 0.1);
 }
 
 .certificados-container {
@@ -436,6 +431,14 @@ button:hover {
 .certificado {
     max-width: 45%;
     height: auto;
+    border: 2px solid var(--color-accent);
+    border-radius: 10px;
+    padding: 10px;
+    transition: transform 0.3s ease;
+}
+
+.certificado:hover {
+    transform: scale(1.05);
 }
 
 .subtitulo {
@@ -444,6 +447,18 @@ button:hover {
 }
 
 @media (max-width: 768px) {
+    body {
+        font-size: 16px;
+    }
+
+    .titulo {
+        font-size: 2.5rem;
+    }
+
+    .subtitulo {
+        font-size: 1.8rem;
+    }
+
     nav {
         flex-wrap: wrap;
     }
