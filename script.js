@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function() {
             'lo-que-ofrezco-l4': 'SEO and web development based on best practices.',
             'lo-que-ofrezco-l5': 'Website update and modernization.',
             'sobre-mi-title': 'About Me',
-            'sobre-mi-content': 'I\'m 20 years old and passionate about web development. I specialize in creating attractive and functional interfaces and have <b>advanced knowledge of English</b>. I started studying Programming in 2022 at Teclab, thanks to which I have basic knowledge of <b>Python</b> and <b>C++</b>. I studied there for 6 months and then switched to Coderhouse in 2023, where I have certificates in <b>Web Development</b> (HTML5, CSS, Sass), <b>JavaScript</b>, and in 2024 I finished studying <b>React JS</b> at UTN.',
+            'sobre-mi-content': 'I\'m 22 years old and passionate about web development. I specialize in creating attractive and functional interfaces and have <b>advanced knowledge of English</b>. I started studying Programming in 2022 at Teclab, thanks to which I have basic knowledge of <b>Python</b> and <b>C++</b>. I studied there for 6 months and then switched to Coderhouse in 2023, where I have certificates in <b>Web Development</b> (HTML5, CSS, Sass), <b>JavaScript</b>, and in 2024 I finished studying <b>React JS</b> at UTN.',
             'habilidades-title': 'My Skills',
             'proyectos-title': 'My Projects',
             'proyecto-1-title': 'Custom WhatsApp',
