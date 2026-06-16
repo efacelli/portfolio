@@ -1,126 +1,61 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const translateButton = document.getElementById('translate-button');
-    let isEnglish = false;
+gsap.registerPlugin(ScrollTrigger);
 
-    const translations = {
-        'es': {
-            'nav-inicio': 'Inicio',
-            'nav-sobre-mi': 'Sobre Mí',
-            'nav-habilidades': 'Habilidades',
-            'nav-proyectos': 'Proyectos',
-            'nav-contacto': 'Contacto',
-            'header-title': 'Desarrollador Frontend',
-            'header-subtitle': '¡Hola! Soy un desarrollador frontend de Santiago del Estero, Argentina.',
-            'lo-que-ofrezco-title': 'Lo que ofrezco',
-            'lo-que-ofrezco-l1': 'Desarrollo de interfaces de usuario modernas y responsivas.',
-            'lo-que-ofrezco-l2': 'Integración de animaciones fluidas y atractivas con tecnologías como GSAP y AOS.',
-            'lo-que-ofrezco-l3': 'Optimización del rendimiento y la accesibilidad web.',
-            'lo-que-ofrezco-l4': 'Desarrollo basado en las mejores prácticas de SEO y diseño web.',
-            'lo-que-ofrezco-l5': 'Actualización y modernización de sitios web existentes.',
-            'sobre-mi-title': 'Sobre Mí',
-            'sobre-mi-content': 'Tengo 20 años y soy apasionado por el desarrollo web. Me especializo en crear interfaces atractivas y funcionales y tengo <b>conocimientos avanzados sobre inglés</b>. Empecé a estudiar Programación en 2022 en Teclab, gracias a eso tengo conocimientos básicos sobre <b>Python</b> y <b>C++</b>, estudié 6 meses allí y me cambié a Coderhouse en 2023, donde tengo certificados de <b>Desarrollador web</b> (HTML5, CSS, Sass), <b>JavaScript</b> y en 2024 terminé de estudiar <b>React JS</b> en la UTN.',
-            'habilidades-title': 'Mis Habilidades',
-            'proyectos-title': 'Mis Proyectos',
-            'proyecto-1-title': 'WhatsApp Propio',
-            'proyecto-1-desc': 'Un WhatsApp funcional desarrollado con React JS.',
-            'proyecto-2-title': 'E-commerce',
-            'proyecto-2-desc': 'Tienda en línea desarrollada con JavaScript.',
-            'btn-ver-proyecto': 'Ver Proyecto',
-            'btn-ver-codigo': 'Ver Código',
-            'contacto-title': 'Contacto'
-        },
-        'en': {
-            'nav-inicio': 'Home',
-            'nav-sobre-mi': 'About Me',
-            'nav-habilidades': 'Skills',
-            'nav-proyectos': 'Projects',
-            'nav-contacto': 'Contact',
-            'header-title': 'Frontend Developer',
-            'header-subtitle': 'Hello! I\'m a frontend developer from Santiago del Estero, Argentina.',
-            'lo-que-ofrezco-title': 'What I offer',
-            'lo-que-ofrezco-l1': 'Modern and responsive user interfaces development.',
-            'lo-que-ofrezco-l2': 'Fluid and attractive animations integration with technologies like GSAP and AOS.',
-            'lo-que-ofrezco-l3': 'Performance optimization and web accessibility optimization.',
-            'lo-que-ofrezco-l4': 'SEO and web development based on best practices.',
-            'lo-que-ofrezco-l5': 'Website update and modernization.',
-            'sobre-mi-title': 'About Me',
-            'sobre-mi-content': 'I\'m 22 years old and passionate about web development. I specialize in creating attractive and functional interfaces and have <b>advanced knowledge of English</b>. I started studying Programming in 2022 at Teclab, thanks to which I have basic knowledge of <b>Python</b> and <b>C++</b>. I studied there for 6 months and then switched to Coderhouse in 2023, where I have certificates in <b>Web Development</b> (HTML5, CSS, Sass), <b>JavaScript</b>, and in 2024 I finished studying <b>React JS</b> at UTN.',
-            'habilidades-title': 'My Skills',
-            'proyectos-title': 'My Projects',
-            'proyecto-1-title': 'Custom WhatsApp',
-            'proyecto-1-desc': 'A functional WhatsApp developed with React JS.',
-            'proyecto-2-title': 'E-commerce',
-            'proyecto-2-desc': 'Online store developed with JavaScript.',
-            'btn-ver-proyecto': 'View Project',
-            'btn-ver-codigo': 'View Code',
-            'contacto-title': 'Contact'
-        }
-    };
+/* NAV */
+const nav = document.getElementById('nav');
+window.addEventListener('scroll',()=>nav.classList.toggle('solid',scrollY>50),{passive:true});
 
-    function updateLanguage(lang) {
-        document.querySelectorAll('[data-translate]').forEach(element => {
-            const key = element.getAttribute('data-translate');
-            if (translations[lang][key]) {
-                element.innerHTML = translations[lang][key]; // Cambiado de textContent a innerHTML para manejar las etiquetas <b>
-            }
-        });
-    }
+/* INDICATOR */
+const secs = ['hero','about','services','projects','stack','contact'];
+const dots = document.querySelectorAll('.idot');
+function syncDots(){
+  const mid = innerHeight*.48;
+  secs.forEach((id,i)=>{
+    const el=document.getElementById(id);if(!el)return;
+    const r=el.getBoundingClientRect();
+    dots[i].classList.toggle('on',r.top<=mid&&r.bottom>mid);
+  });
+}
+window.addEventListener('scroll',syncDots,{passive:true});
+dots.forEach((d,i)=>d.addEventListener('click',()=>document.getElementById(secs[i]).scrollIntoView({behavior:'smooth'})));
 
-    translateButton.addEventListener('click', function() {
-        isEnglish = !isEnglish;
-        updateLanguage(isEnglish ? 'en' : 'es');
-    });
+/* HERO REVEAL */
+const lines = document.querySelectorAll('.h1 .ln');
+gsap.to(lines,{opacity:1,y:0,duration:.95,ease:'power3.out',stagger:.13,delay:.2});
+gsap.to('.hero-eyebrow',{opacity:1,y:0,duration:.7,ease:'power3.out',delay:.1});
+gsap.to('.hero-sub',{opacity:1,y:0,duration:.8,ease:'power3.out',delay:.6});
+gsap.to('.hero-acts',{opacity:1,y:0,duration:.7,ease:'power3.out',delay:.8});
+gsap.to('.hero-meta',{opacity:1,duration:.8,ease:'power2.out',delay:1.05});
+
+/* GOLD RULE */
+ScrollTrigger.create({
+  trigger:'#about',start:'top 70%',
+  onEnter:()=>gsap.to('.gold-rule',{scaleX:1,duration:1.1,ease:'power3.out'})
 });
 
-// Espera a que el DOM esté completamente cargado
-document.addEventListener('DOMContentLoaded', () => {
+/* SECTION REVEALS */
+document.querySelectorAll('.rv').forEach(el=>{
+  if(el.closest('#hero'))return;
+  gsap.fromTo(el,
+    {opacity:0,y:64,scale:.98},
+    {opacity:1,y:0,scale:1,duration:.85,ease:'power3.out',
+     scrollTrigger:{trigger:el,start:'top 82%',toggleActions:'play none none reverse'}}
+  );
+});
 
-    // Animación del logo grande
-    gsap.from(".logo-central", {
-      duration: 1.5,
-      opacity: 0,
-      scale: 0.5,
-      ease: "back.out(1.7)"
-    });
-  
-    // Animación de los elementos de la sección de habilidades
-    gsap.from("#habilidades ul li", {
-      duration: 0.8,
-      opacity: 0,
-      y: 50,
-      stagger: 0.2,
-      ease: "power3.out"
-    });
-  
-    // Animación de los proyectos
-    gsap.from(".proyecto", {
-      duration: 1,
-      opacity: 0,
-      y: 100,
-      stagger: 0.3,
-      ease: "power2.out",
-      scrollTrigger: {
-        trigger: "#proyectos",
-        start: "top 80%"
-      }
-    });
-  
-    // Animación del texto de inicio
-    gsap.from(".texto-inicio", {
-      duration: 1,
-      opacity: 0,
-      x: -100,
-      ease: "power2.out"
-    });
-  
-    // Animación de la foto de perfil
-    gsap.from(".foto-perfil", {
-      duration: 1,
-      opacity: 0,
-      x: 100,
-      ease: "power2.out"
-    });
-  
+/* FADE OUT on exit */
+['about','services','projects','stack','contact'].forEach(id=>{
+  const s=document.getElementById(id);if(!s)return;
+  gsap.to(s,{opacity:.55,scale:.985,ease:'power1.in',
+    scrollTrigger:{trigger:s,start:'bottom 15%',end:'bottom -10%',scrub:true}});
+  gsap.to(s,{opacity:1,scale:1,ease:'none',
+    scrollTrigger:{trigger:s,start:'top 85%',end:'top 15%',scrub:true}});
+});
+
+/* SMOOTH ANCHOR LINKS */
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+  a.addEventListener('click',e=>{
+    const id=a.getAttribute('href').slice(1);
+    const el=document.getElementById(id);
+    if(el){e.preventDefault();el.scrollIntoView({behavior:'smooth'})}
   });
-
-  gsap.registerPlugin(ScrollTrigger);
+});
