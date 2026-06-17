@@ -1,208 +1,344 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<meta name="description" content="Enzo Facelli — Desarrollador Frontend. WordPress, Landing Pages y Automatizaciones."/>
-<title>Enzo Facelli — Web Developer</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet"/>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-<link rel="stylesheet" href="style.css"/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Enzo Facelli — Desarrollador Frontend. WordPress, Landing Pages y Automatizaciones." />
+  <title>Enzo Facelli — Web Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
 
-<nav id="nav">
-  <a href="#hero" class="nav-logo">Enzo Facelli<em>.</em></a>
-  <ul class="nav-links">
-    <li><a href="#about">Sobre mí</a></li>
-    <li><a href="#services">Servicios</a></li>
-    <li><a href="#projects">Proyectos</a></li>
-    <li><a href="#stack">Stack</a></li>
-  </ul>
-  <a href="https://wa.me/543855305773" target="_blank" class="btn-nav">Contactar</a>
-</nav>
+  <nav id="nav">
+    <a href="#hero" class="nav-logo">Enzo Facelli<em>.</em></a>
+    <ul class="nav-links">
+      <li><a href="#about">Sobre mí</a></li>
+      <li><a href="#services">Servicios</a></li>
+      <li><a href="#projects">Proyectos</a></li>
+      <li><a href="#stack">Stack</a></li>
+    </ul>
+    <a href="https://wa.me/543855305773" target="_blank" class="btn-nav">Contactar</a>
+  </nav>
 
-<div id="ind">
-  <div class="idot on" data-s="hero"></div>
-  <div class="idot" data-s="about"></div>
-  <div class="idot" data-s="services"></div>
-  <div class="idot" data-s="projects"></div>
-  <div class="idot" data-s="stack"></div>
-  <div class="idot" data-s="contact"></div>
-</div>
-
-<!-- HERO -->
-<section id="hero">
-  <div class="wrap">
-    <div class="eyebrow hero-eyebrow">Disponible para nuevos proyectos</div>
-    <h1 class="h1">
-      <span class="ln">Desarrollo web</span>
-      <span class="ln">que convierte</span>
-      <span class="ln"><em>visitas en ventas.</em></span>
-    </h1>
-    <p class="hero-sub">Web Developer especializado en WordPress, Landing Pages y Automatizaciones. Trabajo con negocios que quieren resultados medibles, no solo un sitio bonito.</p>
-    <div class="hero-acts">
-      <a href="#projects" class="btn-g">Ver proyectos <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6h8M6 2l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-      <a href="#contact" class="btn-o">Hablemos</a>
-    </div>
-    <div class="hero-meta">
-      <div><div class="hm-num">4+</div><div class="hm-label">Proyectos entregados</div></div>
-      <div><div class="hm-num">3</div><div class="hm-label">Clientes activos</div></div>
-      <div><div class="hm-num">100%</div><div class="hm-label">Entregas a tiempo</div></div>
-    </div>
+  <div id="ind">
+    <div class="idot on" data-s="hero"></div>
+    <div class="idot" data-s="about"></div>
+    <div class="idot" data-s="services"></div>
+    <div class="idot" data-s="projects"></div>
+    <div class="idot" data-s="stack"></div>
+    <div class="idot" data-s="contact"></div>
   </div>
-</section>
 
-<!-- ABOUT -->
-<section id="about">
-  <div class="wrap">
-    <div class="about-grid">
-      <div class="rv">
-        <div class="eyebrow">Sobre mí</div>
-        <h2 class="stitle">El código es el medio.<br>El resultado es el fin.</h2>
-        <span class="gold-rule"></span>
-        <p class="about-body">Me especializo en construir <strong>experiencias digitales que generan negocio</strong>. No ejecuto pedidos: entiendo el problema, propongo la solución y la entrego con precisión.</p>
-        <p class="about-body">Con formación en React (UTN), JavaScript y WordPress, y nivel avanzado de inglés, trabajo con clientes en Argentina y el exterior sin fricciones.</p>
-        <div class="pillars">
-          <div class="pillar"><div class="p-num">01</div><div class="p-lbl">Código limpio y escalable</div></div>
-          <div class="pillar"><div class="p-num">02</div><div class="p-lbl">Entregas puntuales, sin excusas</div></div>
-          <div class="pillar"><div class="p-num">03</div><div class="p-lbl">Comunicación clara y directa</div></div>
-          <div class="pillar"><div class="p-num">04</div><div class="p-lbl">Soporte post-entrega incluido</div></div>
-        </div>
+  <!-- HERO -->
+  <section id="hero">
+    <div class="wrap">
+      <div class="eyebrow hero-eyebrow">Disponible para nuevos proyectos</div>
+      <h1 class="h1">
+        <span class="ln">Desarrollo web</span>
+        <span class="ln">que convierte</span>
+        <span class="ln"><em>visitas en ventas.</em></span>
+      </h1>
+      <p class="hero-sub">Web Developer especializado en WordPress, Landing Pages y Automatizaciones. Trabajo con
+        negocios que quieren resultados medibles, no solo un sitio bonito.</p>
+      <div class="hero-acts">
+        <a href="#projects" class="btn-g">Ver proyectos <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+            <path d="M2 6h8M6 2l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg></a>
+        <a href="#contact" class="btn-o">Hablemos</a>
       </div>
-      <div class="rv">
-        <p class="philosophy">"Un buen sitio web no es el que se ve mejor. Es el que <em>vende más</em>."</p>
-        <div class="values">
-          <div class="val"><div class="val-dot"></div><div>Cada decisión de diseño tiene un propósito funcional. Si no suma, no está.</div></div>
-          <div class="val"><div class="val-dot"></div><div>Priorizo la experiencia del usuario final sobre cualquier tendencia visual.</div></div>
-          <div class="val"><div class="val-dot"></div><div>Trabajo con pocos clientes a la vez para garantizar atención de calidad.</div></div>
-          <div class="val"><div class="val-dot"></div><div>Mido resultados: velocidad, conversión, posicionamiento. No solo estética.</div></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- SERVICES -->
-<section id="services">
-  <div class="wrap">
-    <div class="svc-intro">
-      <div class="rv">
-        <div class="eyebrow">Servicios</div>
-        <h2 class="stitle">Lo que construyo<br>para que crezcas.</h2>
-      </div>
-      <p class="svc-lead rv">Cada servicio está diseñado para resolver un problema real de negocio, no para llenar una lista de funcionalidades.</p>
-    </div>
-    <div class="svc-grid rv">
-      <div class="svc"><div class="svc-n">01</div><div class="svc-name">Landing Pages</div><div class="svc-desc">Páginas diseñadas para convertir. Velocidad, jerarquía visual y copy que guía al visitante hasta la acción.</div><div class="svc-price">Desde USD 300</div></div>
-      <div class="svc"><div class="svc-n">02</div><div class="svc-name">E-commerce</div><div class="svc-desc">Tiendas con WooCommerce optimizadas para vender. Experiencia de compra sin fricción e integración de pagos.</div><div class="svc-price">Desde USD 600</div></div>
-      <div class="svc"><div class="svc-n">03</div><div class="svc-name">WordPress</div><div class="svc-desc">Sitios corporativos en WordPress. Sin plugins innecesarios, con arquitectura limpia y rendimiento real.</div><div class="svc-price">Desde USD 250</div></div>
-      <div class="svc"><div class="svc-n">04</div><div class="svc-name">Automatizaciones</div><div class="svc-desc">Flujos automáticos con Make, Zapier o código custom. Reducí horas de trabajo manual cada semana.</div><div class="svc-price">Desde USD 150</div></div>
-      <div class="svc"><div class="svc-n">05</div><div class="svc-name">Mantenimiento Web</div><div class="svc-desc">Actualizaciones, backups y monitoreo proactivo. Tu sitio siempre funcionando sin preocupaciones.</div><div class="svc-price">Desde USD 80 / mes</div></div>
-      <div class="svc" style="background:rgba(198,161,91,.04)"><div class="svc-n" style="color:var(--gold)">→</div><div class="svc-name" style="color:var(--gold)">Proyecto custom</div><div class="svc-desc">¿Tenés algo específico en mente? Contame el desafío y encontramos la solución juntos.</div><a href="https://wa.me/543855305773" target="_blank" style="display:inline-block;margin-top:1.5rem;font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);font-weight:500">Hablar ahora &rarr;</a></div>
-    </div>
-  </div>
-</section>
-
-<!-- PROJECTS -->
-<section id="projects">
-  <div class="wrap">
-    <div class="rv">
-      <div class="eyebrow">Proyectos</div>
-      <h2 class="stitle">Trabajo real,<br>para clientes reales.</h2>
-    </div>
-    <div class="cases">
-      <a href="https://montecarloclub.shop/" target="_blank" class="case rv">
-        <div><div class="case-idx">01</div><div class="case-type-tag">E-commerce</div></div>
+      <div class="hero-meta">
         <div>
-          <div class="case-title">Montecarlo Club Shop</div>
-          <div class="case-detail">
-            <div><div class="cd-label">Problema</div><div class="cd-val">Vendía por Instagram sin sistema de pago, perdiendo ventas por fricción.</div></div>
-            <div><div class="cd-label">Solución</div><div class="cd-val">Tienda WooCommerce con catálogo, carrito y pasarela. Gestión autónoma.</div></div>
-            <div><div class="cd-label">Resultado</div><div class="cd-val">Canal de ventas online activo con tráfico orgánico desde el primer mes.</div></div>
-          </div>
-          <div class="ctags"><span class="ctag">WordPress</span><span class="ctag">WooCommerce</span><span class="ctag">PHP</span><span class="ctag">SEO</span></div>
+          <div class="hm-num">4+</div>
+          <div class="hm-label">Proyectos entregados</div>
         </div>
-        <div class="c-arrow">↗</div>
-      </a>
-      <a href="https://orchid-reindeer-790610.hostingersite.com/" target="_blank" class="case rv">
-        <div><div class="case-idx">02</div><div class="case-type-tag">Sitio Corporativo</div></div>
         <div>
-          <div class="case-title">Estudio Contable Cerro</div>
-          <div class="case-detail">
-            <div><div class="cd-label">Problema</div><div class="cd-val">Sin presencia online. Captación solo por referidos, sin credibilidad digital.</div></div>
-            <div><div class="cd-label">Solución</div><div class="cd-val">Sitio institucional con identidad clara, servicios detallados y formulario.</div></div>
-            <div><div class="cd-label">Resultado</div><div class="cd-val">Presencia profesional que valida el estudio ante nuevos prospectos.</div></div>
-          </div>
-          <div class="ctags"><span class="ctag">WordPress</span><span class="ctag">CSS Custom</span><span class="ctag">SEO Local</span></div>
+          <div class="hm-num">3</div>
+          <div class="hm-label">Clientes activos</div>
         </div>
-        <div class="c-arrow">↗</div>
-      </a>
-      <a href="https://efacelli.github.io/PsychoProyect/" target="_blank" class="case rv">
-        <div><div class="case-idx">03</div><div class="case-type-tag">Landing Page</div></div>
         <div>
-          <div class="case-title">Landing Page — Psicóloga</div>
-          <div class="case-detail">
-            <div><div class="cd-label">Problema</div><div class="cd-val">Sin forma de captar turnos online. Dependencia total del boca a boca.</div></div>
-            <div><div class="cd-label">Solución</div><div class="cd-val">Landing enfocada en conversión con CTA directo a WhatsApp y reseñas.</div></div>
-            <div><div class="cd-label">Resultado</div><div class="cd-val">Canal de captación activo que genera consultas sin intervención manual.</div></div>
-          </div>
-          <div class="ctags"><span class="ctag">HTML5</span><span class="ctag">CSS3</span><span class="ctag">JavaScript</span></div>
+          <div class="hm-num">100%</div>
+          <div class="hm-label">Entregas a tiempo</div>
         </div>
-        <div class="c-arrow">↗</div>
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- STACK -->
-<section id="stack">
-  <div class="wrap">
-    <div class="stack-intro">
-      <div class="rv">
-        <div class="eyebrow">Stack</div>
-        <h2 class="stitle">Herramientas<br>que domino.</h2>
       </div>
-      <p class="stack-lead rv">No acumulo tecnologías para impresionar. Uso lo que resuelve mejor cada tipo de proyecto.</p>
     </div>
-    <div class="tech-grid rv">
-      <div class="tech"><img src="https://cdn.worldvectorlogo.com/logos/html-1.svg" alt="HTML5"/><span class="tech-name">HTML5</span></div>
-      <div class="tech"><img src="https://cdn.worldvectorlogo.com/logos/css-3.svg" alt="CSS3"/><span class="tech-name">CSS3</span></div>
-      <div class="tech"><img src="https://cdn.worldvectorlogo.com/logos/javascript-r.svg" alt="JavaScript"/><span class="tech-name">JavaScript</span></div>
-      <div class="tech"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/960px-React-icon.svg.png" alt="React"/><span class="tech-name">React</span></div>
-      <div class="tech"><img src="https://cdn.worldvectorlogo.com/logos/typescript-2.svg" alt="TypeScript"/><span class="tech-name">TypeScript</span></div>
-      <div class="tech"><img src="https://cdn.worldvectorlogo.com/logos/wordpress-icon-1.svg" alt="WordPress"/><span class="tech-name">WordPress</span></div>
-      <div class="tech"><img src="https://cdn.worldvectorlogo.com/logos/sass-1.svg" alt="Sass"/><span class="tech-name">Sass</span></div>
-      <div class="tech"><img src="https://cdn.worldvectorlogo.com/logos/gsap-greensock.svg" alt="GSAP"/><span class="tech-name">GSAP</span></div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="wrap">
+      <div class="about-grid">
+        <div class="rv">
+          <div class="eyebrow">Sobre mí</div>
+          <h2 class="stitle">El código es el medio.<br>El resultado es el fin.</h2>
+          <span class="gold-rule"></span>
+          <p class="about-body">Me especializo en construir <strong>experiencias digitales que generan negocio</strong>.
+            No ejecuto pedidos: entiendo el problema, propongo la solución y la entrego con precisión.</p>
+          <p class="about-body">Con formación en React (UTN), JavaScript y WordPress, y nivel avanzado de inglés,
+            trabajo con clientes en Argentina y el exterior sin fricciones.</p>
+          <div class="pillars">
+            <div class="pillar">
+              <div class="p-num">01</div>
+              <div class="p-lbl">Código limpio y escalable</div>
+            </div>
+            <div class="pillar">
+              <div class="p-num">02</div>
+              <div class="p-lbl">Entregas puntuales, sin excusas</div>
+            </div>
+            <div class="pillar">
+              <div class="p-num">03</div>
+              <div class="p-lbl">Comunicación clara y directa</div>
+            </div>
+            <div class="pillar">
+              <div class="p-num">04</div>
+              <div class="p-lbl">Soporte post-entrega incluido</div>
+            </div>
+          </div>
+        </div>
+        <div class="rv">
+          <p class="philosophy">"Un buen sitio web no es el que se ve mejor. Es el que <em>vende más</em>."</p>
+          <div class="values">
+            <div class="val">
+              <div class="val-dot"></div>
+              <div>Cada decisión de diseño tiene un propósito funcional. Si no suma, no está.</div>
+            </div>
+            <div class="val">
+              <div class="val-dot"></div>
+              <div>Priorizo la experiencia del usuario final sobre cualquier tendencia visual.</div>
+            </div>
+            <div class="val">
+              <div class="val-dot"></div>
+              <div>Trabajo con pocos clientes a la vez para garantizar atención de calidad.</div>
+            </div>
+            <div class="val">
+              <div class="val-dot"></div>
+              <div>Mido resultados: velocidad, conversión, posicionamiento. No solo estética.</div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- CONTACT -->
-<section id="contact">
-  <div class="contact-wrap rv">
-    <div class="eyebrow" style="justify-content:center">Contacto</div>
-    <h2 class="c-h2">¿Listo para crear<br>algo <em>serio</em>?</h2>
-    <p class="c-sub">Respondo en menos de 24 horas. Sin propuestas genéricas, sin presupuestos automáticos. Una conversación real sobre tu proyecto.</p>
-    <a href="https://wa.me/543855305773" target="_blank" class="btn-cta">Hablemos <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M2 6.5h9M7 2l4.5 4.5L7 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-    <div class="c-links">
-      <a href="mailto:efacelli.dev@gmail.com" class="c-link">efacelli.dev@gmail.com</a>
-      <a href="https://github.com/efacelli" target="_blank" class="c-link">GitHub</a>
-      <a href="https://www.linkedin.com/in/enzo-facelli-723227321/" target="_blank" class="c-link">LinkedIn</a>
+  <!-- SERVICES -->
+  <section id="services">
+    <div class="wrap">
+      <div class="svc-intro">
+        <div class="rv">
+          <div class="eyebrow">Servicios</div>
+          <h2 class="stitle">Lo que construyo<br>para que crezcas.</h2>
+        </div>
+        <p class="svc-lead rv">Cada servicio está diseñado para resolver un problema real de negocio, no para llenar una
+          lista de funcionalidades.</p>
+      </div>
+      <div class="svc-grid rv">
+        <div class="svc">
+          <div class="svc-n">01</div>
+          <div class="svc-name">Landing Pages</div>
+          <div class="svc-desc">Páginas diseñadas para convertir. Velocidad, jerarquía visual y copy que guía al
+            visitante hasta la acción.</div>
+          <div class="svc-price"></div>
+        </div>
+        <div class="svc">
+          <div class="svc-n">02</div>
+          <div class="svc-name">E-commerce</div>
+          <div class="svc-desc">Tiendas con WooCommerce optimizadas para vender. Experiencia de compra sin fricción e
+            integración de pagos.</div>
+          <div class="svc-price"></div>
+        </div>
+        <div class="svc">
+          <div class="svc-n">03</div>
+          <div class="svc-name">WordPress</div>
+          <div class="svc-desc">Sitios corporativos en WordPress. Sin plugins innecesarios, con arquitectura limpia y
+            rendimiento real.</div>
+          <div class="svc-price"></div>
+        </div>
+        <div class="svc">
+          <div class="svc-n">04</div>
+          <div class="svc-name">Automatizaciones</div>
+          <div class="svc-desc">Flujos automáticos con Make, Zapier o código custom. Reducí horas de trabajo manual cada
+            semana.</div>
+          <div class="svc-price"></div>
+        </div>
+        <div class="svc">
+          <div class="svc-n">05</div>
+          <div class="svc-name">Mantenimiento Web</div>
+          <div class="svc-desc">Actualizaciones, backups y monitoreo proactivo. Tu sitio siempre funcionando sin
+            preocupaciones.</div>
+          <div class="svc-price"></div>
+        </div>
+        <div class="svc" style="background:rgba(198,161,91,.04)">
+          <div class="svc-n" style="color:var(--gold)">→</div>
+          <div class="svc-name" style="color:var(--gold)">Proyecto custom</div>
+          <div class="svc-desc">¿Tenés algo específico en mente? Contame el desafío y encontramos la solución juntos.
+          </div><a href="https://wa.me/543855305773" target="_blank"
+            style="display:inline-block;margin-top:1.5rem;font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);font-weight:500">Hablar
+            ahora &rarr;</a>
+        </div>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<footer>
-  <p>&copy; 2026 Enzo Facelli. Todos los derechos reservados.</p>
-  <p style="color:rgba(198,161,91,.3);font-size:.62rem;letter-spacing:.1em;text-transform:uppercase">Santiago del Estero, Argentina</p>
-</footer>
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="wrap">
+      <div class="rv">
+        <div class="eyebrow">Proyectos</div>
+        <h2 class="stitle">Trabajo real,<br>para clientes reales.</h2>
+      </div>
+      <div class="cases">
+        <a href="https://montecarloclub.shop/" target="_blank" class="case rv">
+          <div>
+            <div class="case-idx">01</div>
+            <div class="case-type-tag">E-commerce</div>
+          </div>
+          <div>
+            <div class="case-title">Montecarlo Club Shop</div>
+            <div class="case-detail">
+              <div>
+                <div class="cd-label">Problema</div>
+                <div class="cd-val">Vendía por Instagram sin sistema de pago, perdiendo ventas por fricción.</div>
+              </div>
+              <div>
+                <div class="cd-label">Solución</div>
+                <div class="cd-val">Tienda WooCommerce con catálogo, carrito y pasarela. Gestión autónoma.</div>
+              </div>
+              <div>
+                <div class="cd-label">Resultado</div>
+                <div class="cd-val">Canal de ventas online activo con tráfico orgánico desde el primer mes.</div>
+              </div>
+            </div>
+            <div class="ctags"><span class="ctag">WordPress</span><span class="ctag">WooCommerce</span><span
+                class="ctag">PHP</span><span class="ctag">SEO</span></div>
+          </div>
+          <div class="c-arrow">↗</div>
+        </a>
+        <a href="https://orchid-reindeer-790610.hostingersite.com/" target="_blank" class="case rv">
+          <div>
+            <div class="case-idx">02</div>
+            <div class="case-type-tag">Sitio Corporativo</div>
+          </div>
+          <div>
+            <div class="case-title">Estudio Contable Cerro</div>
+            <div class="case-detail">
+              <div>
+                <div class="cd-label">Problema</div>
+                <div class="cd-val">Sin presencia online. Captación solo por referidos, sin credibilidad digital.</div>
+              </div>
+              <div>
+                <div class="cd-label">Solución</div>
+                <div class="cd-val">Sitio institucional con identidad clara, servicios detallados y formulario.</div>
+              </div>
+              <div>
+                <div class="cd-label">Resultado</div>
+                <div class="cd-val">Presencia profesional que valida el estudio ante nuevos prospectos.</div>
+              </div>
+            </div>
+            <div class="ctags"><span class="ctag">WordPress</span><span class="ctag">CSS Custom</span><span
+                class="ctag">SEO Local</span></div>
+          </div>
+          <div class="c-arrow">↗</div>
+        </a>
+        <a href="https://efacelli.github.io/PsychoProyect/" target="_blank" class="case rv">
+          <div>
+            <div class="case-idx">03</div>
+            <div class="case-type-tag">Landing Page</div>
+          </div>
+          <div>
+            <div class="case-title">Landing Page — Psicóloga</div>
+            <div class="case-detail">
+              <div>
+                <div class="cd-label">Problema</div>
+                <div class="cd-val">Sin forma de captar turnos online. Dependencia total del boca a boca.</div>
+              </div>
+              <div>
+                <div class="cd-label">Solución</div>
+                <div class="cd-val">Landing enfocada en conversión con CTA directo a WhatsApp y reseñas.</div>
+              </div>
+              <div>
+                <div class="cd-label">Resultado</div>
+                <div class="cd-val">Canal de captación activo que genera consultas sin intervención manual.</div>
+              </div>
+            </div>
+            <div class="ctags"><span class="ctag">HTML5</span><span class="ctag">CSS3</span><span
+                class="ctag">JavaScript</span></div>
+          </div>
+          <div class="c-arrow">↗</div>
+        </a>
+      </div>
+    </div>
+  </section>
 
-<script src="script.js"></script>
+  <!-- STACK -->
+  <section id="stack">
+    <div class="wrap">
+      <div class="stack-intro">
+        <div class="rv">
+          <div class="eyebrow">Stack</div>
+          <h2 class="stitle">Herramientas<br>que domino.</h2>
+        </div>
+        <p class="stack-lead rv">No acumulo tecnologías para impresionar. Uso lo que resuelve mejor cada tipo de
+          proyecto.</p>
+      </div>
+      <div class="tech-grid rv">
+        <div class="tech"><img src="https://cdn.worldvectorlogo.com/logos/html-1.svg" alt="HTML5" /><span
+            class="tech-name">HTML5</span></div>
+        <div class="tech"><img src="https://cdn.worldvectorlogo.com/logos/css-3.svg" alt="CSS3" /><span
+            class="tech-name">CSS3</span></div>
+        <div class="tech"><img src="https://cdn.worldvectorlogo.com/logos/javascript-r.svg" alt="JavaScript" /><span
+            class="tech-name">JavaScript</span></div>
+        <div class="tech"><img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/960px-React-icon.svg.png"
+            alt="React" /><span class="tech-name">React</span></div>
+        <div class="tech"><img src="https://cdn.worldvectorlogo.com/logos/typescript-2.svg" alt="TypeScript" /><span
+            class="tech-name">TypeScript</span></div>
+        <div class="tech"><img src="https://cdn.worldvectorlogo.com/logos/wordpress-icon-1.svg" alt="WordPress" /><span
+            class="tech-name">WordPress</span></div>
+        <div class="tech"><img src="https://cdn.worldvectorlogo.com/logos/sass-1.svg" alt="Sass" /><span
+            class="tech-name">Sass</span></div>
+        <div class="tech"><img src="https://cdn.worldvectorlogo.com/logos/gsap-greensock.svg" alt="GSAP" /><span
+            class="tech-name">GSAP</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="contact-wrap rv">
+      <div class="eyebrow" style="justify-content:center">Contacto</div>
+      <h2 class="c-h2">¿Listo para crear<br>algo <em>serio</em>?</h2>
+      <p class="c-sub">Respondo en menos de 24 horas. Sin propuestas genéricas, sin presupuestos automáticos. Una
+        conversación real sobre tu proyecto.</p>
+      <a href="https://wa.me/543855305773" target="_blank" class="btn-cta">Hablemos <svg width="13" height="13"
+          viewBox="0 0 13 13" fill="none">
+          <path d="M2 6.5h9M7 2l4.5 4.5L7 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+            stroke-linejoin="round" />
+        </svg></a>
+      <div class="c-links">
+        <a href="mailto:efacelli.dev@gmail.com" class="c-link">efacelli.dev@gmail.com</a>
+        <a href="https://github.com/efacelli" target="_blank" class="c-link">GitHub</a>
+        <a href="https://www.linkedin.com/in/enzo-facelli-723227321/" target="_blank" class="c-link">LinkedIn</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 Enzo Facelli. Todos los derechos reservados.</p>
+    <p style="color:rgba(198,161,91,.3);font-size:.62rem;letter-spacing:.1em;text-transform:uppercase">Santiago del
+      Estero, Argentina</p>
+  </footer>
+
+  <script src="script.js"></script>
 
 
 </body>
+
 </html>
