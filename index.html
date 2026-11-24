@@ -9,7 +9,7 @@
   <title>Enzo Facelli — Web Developer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
   <link rel="stylesheet" href="style.css" />
@@ -20,7 +20,10 @@
 
 
   <nav id="nav">
-    <a href="#hero" class="nav-logo">Enzo Facelli<em>.</em></a>
+    <a href="#hero" class="nav-logo" aria-label="efacelli — inicio">
+      <span class="nl-braces" aria-hidden="true">{}</span>
+      <span class="nl-word"><em>&lt;</em>efacelli<em>/&gt;</em></span>
+    </a>
     <ul class="nav-links">
       <li><a href="#projects">Proyectos</a></li>
       <li><a href="#services">Servicios</a></li>
@@ -506,6 +509,11 @@
   </section>
 
   <footer>
+    <div class="f-logo" aria-label="efacelli — Programador | Desarrollador">
+      <span class="fl-braces" aria-hidden="true">{}</span>
+      <span class="fl-word">&lt;efacelli/&gt;</span>
+      <span class="fl-tag">Programador | Desarrollador</span>
+    </div>
     <p>&copy; 2026 Enzo Facelli. Todos los derechos reservados.</p>
     <p style="color:rgba(198,161,91,.3);font-size:.62rem;letter-spacing:.1em;text-transform:uppercase">Santiago del
       Estero, Argentina</p>
